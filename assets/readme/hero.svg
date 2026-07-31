@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="'SF Mono','Fira Code','Cascadia Code',monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fafafa"/>
+      <stop offset="100%" stop-color="#f0f0f0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="960" height="400" fill="url(#bg)" rx="12"/>
+
+  <!-- left: title block -->
+  <text x="48" y="60" fill="#e85d26" font-size="11" letter-spacing="3" font-weight="600">CODEX SKILL</text>
+  <text x="48" y="100" fill="#111" font-size="28" font-weight="700">jcg-documentation-pet</text>
+  <text x="48" y="134" fill="#555" font-size="14">Consistent clumsy black mascot for DawnVibe docs</text>
+
+  <!-- priority badge -->
+  <rect x="48" y="156" width="280" height="28" rx="6" fill="#e85d2611" stroke="#e85d26" stroke-width="1"/>
+  <text x="60" y="175" fill="#e85d26" font-size="12" font-weight="600">character consistency &gt; scene detail</text>
+
+  <!-- feature chips -->
+  <rect x="48" y="200" width="100" height="24" rx="5" fill="#fff" stroke="#ddd"/>
+  <text x="58" y="217" fill="#333" font-size="10">Identity Lock</text>
+  <rect x="156" y="200" width="100" height="24" rx="5" fill="#fff" stroke="#ddd"/>
+  <text x="166" y="217" fill="#333" font-size="10">Prompt Template</text>
+  <rect x="264" y="200" width="80" height="24" rx="5" fill="#fff" stroke="#ddd"/>
+  <text x="274" y="217" fill="#333" font-size="10">QA Checklist</text>
+
+  <!-- metadata -->
+  <text x="48" y="260" fill="#999" font-size="10">Python 3.11+ · 20 contract tests · CI on every push · MIT</text>
+
+  <!-- right: Dawn Pet character illustration -->
+  <g transform="translate(580, 60)">
+    <!-- white card -->
+    <rect x="0" y="0" width="340" height="280" rx="10" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+
+    <!-- Dawn Pet body: one continuous pear-shaped black mass -->
+    <ellipse cx="170" cy="140" rx="52" ry="62" fill="#111"/>
+    <!-- slight asymmetry bump on left -->
+    <ellipse cx="148" cy="125" rx="18" ry="22" fill="#111"/>
+
+    <!-- two small white dot eyes, slightly uneven -->
+    <circle cx="155" cy="118" r="6" fill="#fff"/>
+    <circle cx="178" cy="121" r="5.5" fill="#fff"/>
+
+    <!-- tiny orange-red belly semicircle -->
+    <path d="M160,172 A10,6 0 0,0 180,172" fill="#e85d26"/>
+
+    <!-- short stubby arms -->
+    <ellipse cx="122" cy="148" rx="10" ry="7" fill="#111"/>
+    <ellipse cx="218" cy="150" rx="10" ry="7" fill="#111"/>
+
+    <!-- short legs with flat feet -->
+    <ellipse cx="152" cy="200" rx="8" ry="12" fill="#111"/>
+    <ellipse cx="188" cy="200" rx="8" ry="12" fill="#111"/>
+    <ellipse cx="148" cy="210" rx="14" ry="5" fill="#111"/>
+    <ellipse cx="192" cy="210" rx="14" ry="5" fill="#111"/>
+
+    <!-- a wobbly hand-drawn box (prop) -->
+    <path d="M220,100 L280,98 L282,155 L218,158 Z" fill="none" stroke="#333" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M220,100 L240,85 L300,83 L280,98" fill="none" stroke="#333" stroke-width="1.2"/>
+    <path d="M280,98 L300,83 L302,140 L282,155" fill="none" stroke="#333" stroke-width="1.2"/>
+
+    <!-- label -->
+    <text x="170" y="252" text-anchor="middle" fill="#999" font-size="10">Dawn Pet — serious, clumsy, adorable</text>
+  </g>
+
+  <!-- bottom accent line -->
+  <line x1="48" y1="370" x2="912" y2="370" stroke="#e85d26" stroke-width="2" stroke-dasharray="4,4" opacity="0.4"/>
+</svg>

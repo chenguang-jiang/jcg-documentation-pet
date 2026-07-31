@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dawn Pet"
+  short_description: "生成蠢萌黑色 Dawn Pet 角色与白底手绘场景配图"
+  default_prompt: "Use $dawn-pet 生成一张保持角色一致、认真笨拙又蠢萌的白底手绘宠物配图。"
