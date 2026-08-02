@@ -87,7 +87,8 @@ class TestSkillContract(unittest.TestCase):
 
     def test_yaml_display_name(self) -> None:
         text = (ROOT / "agents" / "openai.yaml").read_text(encoding="utf-8")
-        self.assertIn("Dawn Pet", text)
+        self.assertIn('display_name: "jcg-documentation-pet"', text)
+        self.assertIn("Dawn Pet", text)  # brand retained in short_description
 
     def test_repo_readme_english(self) -> None:
         text = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
