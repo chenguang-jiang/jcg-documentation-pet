@@ -10,14 +10,29 @@ description: 为 DawnVibe 生成和编辑固定的蠢萌黑色宠物 Dawn Pet，
 ## 开始前
 
 1. 阅读 [identity.md](references/identity.md)，锁定角色身份。
-2. 阅读 [visual-system.md](references/visual-system.md)，选择构图和表现方式。
-3. 使用 [prompt-template.md](references/prompt-template.md) 组织提示词。
-4. 生成后按 [qa-checklist.md](references/qa-checklist.md) 检查。
-5. 如果要画**流程 / 状态 / 决策**（而非单一动作），额外阅读 [flow-diagram.md](references/flow-diagram.md)，用“节点语义 → 动作映射表”把每个节点翻译成 Dawn Pet 的动作。
+2. **先自动判别资产类型**（见下节“自动判别资产类型”）：不要等用户点名，按内容结构信号自己选类型；判别为流程 / 状态 / 决策时，额外阅读 [flow-diagram.md](references/flow-diagram.md)，用“节点语义 → 动作映射表”把每个节点翻译成 Dawn Pet 的动作。
+3. 阅读 [visual-system.md](references/visual-system.md)，选择构图和表现方式。
+4. 使用 [prompt-template.md](references/prompt-template.md) 组织提示词。
+5. 生成后按 [qa-checklist.md](references/qa-checklist.md) 检查。
+6. **动手前用一句话声明判别结果**（如“识别为 4 节点流程，用横向流程图解”），便于用户纠偏；用户未反对即继续。
 
 始终把 [dawn-pet-anchor.png](assets/identity/dawn-pet-anchor.png) 作为角色身份参考图传给图像生成工具。它是当前唯一正式锚点。不得回退到旧机器人、Dawn Bird 或无脸抽象形态。
 
-## 选择资产类型
+## 自动判别资产类型
+
+**不要等用户点名类型。** 先看输入内容的**结构特征**，按下表自动选类型；表里没列的结构，按“有没有先后 / 分支 / 循环”归到最接近的一行。判别是开放映射，不需要为每种业务内容补示例。
+
+| 内容结构信号 | 自动选 |
+|---|---|
+| 只要头像 / logo / 主视觉，无场景无动作叙事 | 头像或主视觉 |
+| 要展示角色的几种姿势 / 动作集合 | 动作设定图 |
+| 单一概念 / 单一动作 / 一个比喻，**无**先后顺序 | 正文场景配图 |
+| ≥2 个有序步骤、时序连接（先…再…然后 / 步骤 1,2,3 / A→B→C）、状态迁移、条件分支（如果…则…否则）、循环或重试 | **流程图解** |
+| 给一张已有图、只改其中某部分 | 局部编辑 |
+
+**自动降级**：判别为流程图解，但主线节点 > 6，或内容含精确数值 / 表格 / 代码 / 多泳道并发 → 自动改用 mermaid（或 mermaid 精确图 + 3–5 节点 Dawn Pet 意境封面），不硬画。
+
+各类型的画面规格：
 
 - **头像或主视觉**：纯白背景、单角色、完整清晰的黑色轮廓。
 - **动作设定图**：最多三个互不遮挡的姿势；三个角色必须看起来是同一个 Dawn Pet。
@@ -51,8 +66,9 @@ description: 为 DawnVibe 生成和编辑固定的蠢萌黑色宠物 Dawn Pet，
 
 ## 生成与交付
 
-1. 使用内置 ImageGen，并传入正式锚点图作为第一身份参考。
-2. 将其他图片仅作为姿势、道具或构图参考，不得覆盖角色身份。
-3. 如需迭代，优先修正轮廓，再修正眼睛、四肢、肚标，最后调整道具和构图。
-4. 项目内资产默认保存到 `assets/dawn-pet/<topic-slug>/`，并使用可读文件名。
+1. 确认已自动判别资产类型并声明（见上节）；若用户纠偏则按纠偏后的类型走。
+2. 使用内置 ImageGen，并传入正式锚点图作为第一身份参考。
+3. 将其他图片仅作为姿势、道具或构图参考，不得覆盖角色身份。
+4. 如需迭代，优先修正轮廓，再修正眼睛、四肢、肚标，最后调整道具和构图。
+5. 项目内资产默认保存到 `assets/dawn-pet/<topic-slug>/`，并使用可读文件名。
 

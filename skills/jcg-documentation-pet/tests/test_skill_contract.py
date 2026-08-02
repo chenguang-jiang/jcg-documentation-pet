@@ -47,6 +47,16 @@ class TestSkillContract(unittest.TestCase):
         self.assertIn("mermaid", text)
         self.assertIn("流程图解", SKILL_MD)
 
+    def test_auto_routing(self) -> None:
+        # The skill must auto-discriminate the asset type from content
+        # structure instead of waiting for the user to name it.
+        self.assertIn("自动判别资产类型", SKILL_MD)
+        self.assertIn("时序连接", SKILL_MD)
+        self.assertIn("条件分支", SKILL_MD)
+        self.assertIn("自动降级", SKILL_MD)
+        flow = (ROOT / "references" / "flow-diagram.md").read_text(encoding="utf-8")
+        self.assertIn("自动识别信号", flow)
+
     def test_identity_md(self) -> None:
         text = (ROOT / "references" / "identity.md").read_text(encoding="utf-8")
         self.assertIn("不可变特征", text)

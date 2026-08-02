@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SKILL.md` routes flow / state / decision content to the flow-diagram
   workflow and documents the mermaid-collaboration pattern.
 - Contract test for `flow-diagram.md` (22 assertions total).
+- Auto asset-type routing: `SKILL.md` now discriminates the asset type from
+  content structure (ordered steps / arrows / branches / loops) instead of
+  waiting for the user to name it, declares the decision in one line before
+  drawing, and falls back to mermaid automatically; `flow-diagram.md` gains
+  structural recognition signals. Guarded by `test_auto_routing`
+  (23 assertions total).
 
 ## [0.1.0] - 2026-07-30
 

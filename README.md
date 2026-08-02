@@ -7,7 +7,7 @@
   ·
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT"></a>
   <img src="https://img.shields.io/badge/Codex-Skill-purple.svg" alt="Codex Skill">
-  <img src="https://img.shields.io/badge/tests-22%20passing-brightgreen.svg" alt="22 tests passing">
+  <img src="https://img.shields.io/badge/tests-23%20passing-brightgreen.svg" alt="23 tests passing">
   <a href="https://github.com/chenguang-jiang/jcg-documentation-pet/actions/workflows/test.yml"><img src="https://github.com/chenguang-jiang/jcg-documentation-pet/actions/workflows/test.yml/badge.svg" alt="CI"></a>
 </p>
 
@@ -27,7 +27,7 @@
 | 📝 | **Prompt templates** | Ready-to-use templates with character invariants, style constraints, and iteration phrases for partial edits. |
 | ✅ | **QA checklist** | Post-generation checklist: identity consistency, style compliance, failure signals, and fix order. |
 | 🖼️ | **Anchor image** | `dawn-pet-anchor.png` — three poses (standing, carrying box, sitting) that define the single source of truth. |
-| 🧪 | **22 contract tests** | Validates SKILL.md structure, reference files, anchor image, agent config, and repo assets. CI on every push. |
+| 🧪 | **23 contract tests** | Validates SKILL.md structure, reference files, anchor image, agent config, and repo assets. CI on every push. |
 
 ## What it is
 
@@ -120,7 +120,7 @@ jcg-documentation-pet/
     │   ├── prompt-template.md
     │   └── qa-checklist.md
     └── tests/
-        └── test_skill_contract.py   (22 assertions)
+        └── test_skill_contract.py   (23 assertions)
 ```
 
 ## License
