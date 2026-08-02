@@ -55,3 +55,46 @@ Show the same Dawn Pet seriously trying to push an oversized folder across a cle
 - `Keep the character unchanged. Shorten and thicken the legs, and make the feet flatter and slightly larger.`
 - `Keep the scene unchanged. Simplify the prop to sparse, slightly wobbly black lines and increase the surrounding white space.`
 
+## 流程图解模板
+
+画流程 / 状态 / 决策图时用这个模板。先把每个流程节点查 [flow-diagram.md](flow-diagram.md) 的“节点语义 → 动作映射表”翻译成动作，再填入 `{nodes}`。
+
+```text
+Use case: illustration-story
+Asset type: 16:9 flow diagram ({layout: linear / comic / loop / branch}, {N} nodes)
+
+Input images:
+- Image 1 is the exact Dawn Pet identity reference. Every node must show the
+  SAME Dawn Pet (identical pear-shaped black body, two uneven white dot eyes,
+  short limbs, flat feet, tiny orange-red belly mark). Only the action and the
+  thin-line prop change between nodes.
+
+Primary request:
+Draw a {N}-node flow diagram on a pure white background using a {layout}
+layout. Each node is the same Dawn Pet doing one action. Connect nodes with
+sparse, slightly wobbly thin black arrows following the flow direction; arrows
+must not cross. Under each node, one short handwritten label in black, placed
+OUTSIDE the character.
+
+Nodes (action per node, from the semantic→action mapping table):
+{node 1 (label "..."): same Dawn Pet <action> with <thin-line prop>}
+{node 2 (label "..."): ...}
+{...up to 5 nodes...}
+
+Character invariants (every node): one short wide solid-black pear body; head
+and torso fused, no neck; exactly two small uneven white dot eyes, no mouth;
+very short rounded arms, short legs, oversized flat feet; one tiny flat
+orange-red semicircle low on the belly.
+
+Style: minimalist hand-drawn black-ink cartoon, pure white background,
+generous whitespace between nodes. Props and arrows only with sparse, slightly
+wobbly thin black lines. No second color except the belly mark.
+
+Constraints: no text on the character, no title, no legend, no border, no
+watermark, no numbered circles, no realistic icons (gears, clouds, db
+cylinders). No 3D, gloss, gradient, shading. Keep every Dawn Pet clearly the
+same character.
+```
+
+> 节点 > 6、含精确数值 / 表格 / 代码 / 多泳道并发的流程，不要用本模板——改用 mermaid，本模板最多画 3–5 节点的主线意境封面。
+

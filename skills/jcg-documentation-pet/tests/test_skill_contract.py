@@ -27,18 +27,25 @@ class TestSkillContract(unittest.TestCase):
         self.assertIn("表达性格", SKILL_MD)
 
     def test_asset_types(self) -> None:
-        for t in ("头像", "动作设定图", "正文场景配图", "局部编辑"):
+        for t in ("头像", "动作设定图", "正文场景配图", "流程图解", "局部编辑"):
             self.assertIn(t, SKILL_MD)
 
     def test_anchor_reference(self) -> None:
         self.assertIn("dawn-pet-anchor.png", SKILL_MD)
 
     def test_reference_links(self) -> None:
-        for ref in ("identity.md", "visual-system.md", "prompt-template.md", "qa-checklist.md"):
+        for ref in ("identity.md", "visual-system.md", "prompt-template.md", "qa-checklist.md", "flow-diagram.md"):
             self.assertIn(ref, SKILL_MD)
 
     def test_generation_workflow(self) -> None:
         self.assertIn("生成与交付", SKILL_MD)
+
+    def test_flow_diagram_md(self) -> None:
+        text = (ROOT / "references" / "flow-diagram.md").read_text(encoding="utf-8")
+        self.assertIn("节点语义", text)
+        self.assertIn("映射表", text)
+        self.assertIn("mermaid", text)
+        self.assertIn("流程图解", SKILL_MD)
 
     def test_identity_md(self) -> None:
         text = (ROOT / "references" / "identity.md").read_text(encoding="utf-8")

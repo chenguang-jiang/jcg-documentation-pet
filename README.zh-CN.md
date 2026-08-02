@@ -7,7 +7,7 @@
   ·
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT"></a>
   <img src="https://img.shields.io/badge/Codex-Skill-purple.svg" alt="Codex Skill">
-  <img src="https://img.shields.io/badge/tests-21%20passing-brightgreen.svg" alt="21 tests passing">
+  <img src="https://img.shields.io/badge/tests-22%20passing-brightgreen.svg" alt="22 tests passing">
   <a href="https://github.com/chenguang-jiang/jcg-documentation-pet/actions/workflows/test.yml"><img src="https://github.com/chenguang-jiang/jcg-documentation-pet/actions/workflows/test.yml/badge.svg" alt="CI"></a>
 </p>
 
@@ -27,7 +27,7 @@
 | 📝 | **提示词模板** | 即用的模板，内含角色不变量、风格约束和局部迭代句式。 |
 | ✅ | **QA 检查表** | 生成后检查：身份一致性、风格合规、失败信号、修正顺序。 |
 | 🖼️ | **锚点图** | `dawn-pet-anchor.png`——三个姿势（站立、搬箱、坐倒）定义唯一身份真相。 |
-| 🧪 | **21 项契约测试** | 验证 SKILL.md 结构、参考文件、锚点图、agent 配置和仓库资产。每次 push 自动 CI。 |
+| 🧪 | **22 项契约测试** | 验证 SKILL.md 结构、参考文件、锚点图、agent 配置和仓库资产。每次 push 自动 CI。 |
 
 ## 这是什么
 
@@ -61,6 +61,7 @@ flowchart LR
 | **动作设定图** | 横向白底 | 最多 3 个分离姿势，身份一致 |
 | **正文场景配图** | 16:9 白底 | 一个动作、一个道具、角色为焦点 |
 | **局部编辑** | 与原图相同 | 只改点名部分，其余不变 |
+| **流程图解** | 16:9 白底 | 3–5 节点；每节点同一个 Dawn Pet，细线箭头，节点下手写标签 |
 
 ## 角色不变量
 
@@ -119,7 +120,7 @@ jcg-documentation-pet/
     │   ├── prompt-template.md
     │   └── qa-checklist.md
     └── tests/
-        └── test_skill_contract.py   (21 项断言)
+        └── test_skill_contract.py   (22 项断言)
 ```
 
 ## 许可证

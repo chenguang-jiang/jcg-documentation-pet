@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Flow-diagram asset type: render processes / state machines / decisions as a
+  sequence of Dawn Pet actions connected by thin-line arrows, driven by a
+  semantic→action mapping table (`references/flow-diagram.md`).
+- Flow-diagram sections in `visual-system.md`, `prompt-template.md` (template),
+  and `qa-checklist.md` (consistency checklist).
+- `SKILL.md` routes flow / state / decision content to the flow-diagram
+  workflow and documents the mermaid-collaboration pattern.
+- Contract test for `flow-diagram.md` (22 assertions total).
+
 ## [0.1.0] - 2026-07-30
 
 ### Added

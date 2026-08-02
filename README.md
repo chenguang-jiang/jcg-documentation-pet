@@ -7,7 +7,7 @@
   ·
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT"></a>
   <img src="https://img.shields.io/badge/Codex-Skill-purple.svg" alt="Codex Skill">
-  <img src="https://img.shields.io/badge/tests-21%20passing-brightgreen.svg" alt="21 tests passing">
+  <img src="https://img.shields.io/badge/tests-22%20passing-brightgreen.svg" alt="22 tests passing">
   <a href="https://github.com/chenguang-jiang/jcg-documentation-pet/actions/workflows/test.yml"><img src="https://github.com/chenguang-jiang/jcg-documentation-pet/actions/workflows/test.yml/badge.svg" alt="CI"></a>
 </p>
 
@@ -27,7 +27,7 @@
 | 📝 | **Prompt templates** | Ready-to-use templates with character invariants, style constraints, and iteration phrases for partial edits. |
 | ✅ | **QA checklist** | Post-generation checklist: identity consistency, style compliance, failure signals, and fix order. |
 | 🖼️ | **Anchor image** | `dawn-pet-anchor.png` — three poses (standing, carrying box, sitting) that define the single source of truth. |
-| 🧪 | **20 contract tests** | Validates SKILL.md structure, reference files, anchor image, agent config, and repo assets. CI on every push. |
+| 🧪 | **22 contract tests** | Validates SKILL.md structure, reference files, anchor image, agent config, and repo assets. CI on every push. |
 
 ## What it is
 
@@ -61,6 +61,7 @@ flowchart LR
 | **Pose sheet** | Landscape, white bg | Up to 3 separated poses, identical identity |
 | **Editorial scene** | 16:9, white bg | One action, one prop, character is focus |
 | **Partial edit** | Same as original | Only modify named parts, keep everything else |
+| **Flow diagram** | 16:9, white bg | 3–5 nodes; same Dawn Pet per node, thin-line arrows, handwritten label under each |
 
 ## Character invariants
 
@@ -119,7 +120,7 @@ jcg-documentation-pet/
     │   ├── prompt-template.md
     │   └── qa-checklist.md
     └── tests/
-        └── test_skill_contract.py   (21 assertions)
+        └── test_skill_contract.py   (22 assertions)
 ```
 
 ## License

@@ -13,6 +13,7 @@ description: 为 DawnVibe 生成和编辑固定的蠢萌黑色宠物 Dawn Pet，
 2. 阅读 [visual-system.md](references/visual-system.md)，选择构图和表现方式。
 3. 使用 [prompt-template.md](references/prompt-template.md) 组织提示词。
 4. 生成后按 [qa-checklist.md](references/qa-checklist.md) 检查。
+5. 如果要画**流程 / 状态 / 决策**（而非单一动作），额外阅读 [flow-diagram.md](references/flow-diagram.md)，用“节点语义 → 动作映射表”把每个节点翻译成 Dawn Pet 的动作。
 
 始终把 [dawn-pet-anchor.png](assets/identity/dawn-pet-anchor.png) 作为角色身份参考图传给图像生成工具。它是当前唯一正式锚点。不得回退到旧机器人、Dawn Bird 或无脸抽象形态。
 
@@ -21,7 +22,20 @@ description: 为 DawnVibe 生成和编辑固定的蠢萌黑色宠物 Dawn Pet，
 - **头像或主视觉**：纯白背景、单角色、完整清晰的黑色轮廓。
 - **动作设定图**：最多三个互不遮挡的姿势；三个角色必须看起来是同一个 Dawn Pet。
 - **正文场景配图**：默认 16:9；只讲一个动作，搭配一个主要道具。
+- **流程图解**：3–5 个节点的主线流程 / 状态机 / 决策，每个节点是同一个 Dawn Pet 的一个动作，用稀疏细线箭头串起来，节点下方一行手写短词标签。详见下文与 [flow-diagram.md](references/flow-diagram.md)。
 - **局部编辑**：只修改用户点名的部分，其余身份特征、构图和风格保持不变。
+
+## 流程图解（把流程画成戏）
+
+当内容是流程、状态机、时序主线或决策分支时，不要只画一张孤立配图，而是让 Dawn Pet **逐节点演出来**：
+
+1. 列出流程的 3–5 个主线节点（超过 6 个就拆图，或精确部分交给 mermaid）。
+2. 查 [flow-diagram.md](references/flow-diagram.md) 的“节点语义 → 动作映射表”，把每个节点翻译成 Dawn Pet 的物理动作（发起=按大按钮、授权=按手印、校验=拿放大镜、失败=被箱子压倒……）。
+3. 选一种布局：横向流水线 / 漫画分格 / 循环 / 分支；用 [prompt-template.md](references/prompt-template.md) 的“流程图解模板”填节点。
+4. 节点间用稀疏细黑线箭头连接（不交叉），节点正下方一行手写短词标签（角色之外）。
+5. 生成后按 [qa-checklist.md](references/qa-checklist.md) 的“流程图解一致性”清单检查。
+
+**与 mermaid 协作**：技术文章里，用 mermaid 承载精确的节点 / 条件 / 字段，用 Dawn Pet 流程图解当 3–5 节点的主线意境封面，两者节点命名对齐——精确与好看各司其职。Dawn Pet 图**不冒充**精确图：需要数值、表格、代码、多泳道并发时，一律用 mermaid。
 
 ## 锁定身份
 
